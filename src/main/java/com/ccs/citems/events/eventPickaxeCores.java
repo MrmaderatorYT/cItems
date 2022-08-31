@@ -11,7 +11,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 
 
-public class eventPickaxeCore implements Listener {
+public class eventPickaxeCores implements Listener {
 
     static ItemStack nullTool = new ItemStack(Material.AIR, 1);
 
@@ -155,4 +155,4 @@ public class eventPickaxeCore implements Listener {
         return meta.hasEnchant(ench);
     }
 
-}}
+}
