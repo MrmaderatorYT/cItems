@@ -21,7 +21,7 @@ public class eventhelmet implements Listener {
     public void Helmet(InventoryCloseEvent event) {
         Player p = (Player) event.getPlayer();
 
-            if (p.getInventory().getHelmet() != null && p.getInventory().getHelmet().containsEnchantment(Enchantment.SILK_TOUCH)) {
+            if (p.getInventory().getHelmet() != null &&p.getInventory().getHelmet().hasItemMeta()&& p.getInventory().getHelmet().getItemMeta().getDisplayName().equals("Helmet of power")) {
                 PotionEffect health = new PotionEffect(PotionEffectType.REGENERATION, 10000000, 2);
                 PotionEffect dolphins = new PotionEffect(PotionEffectType.DOLPHINS_GRACE, 10000000, 1);
                 p.addPotionEffect(health);

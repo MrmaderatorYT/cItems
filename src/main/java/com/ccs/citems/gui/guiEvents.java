@@ -1,3 +1,4 @@
+//class witch getting a player things
 package com.ccs.citems.gui;
 
 import org.bukkit.entity.Player;

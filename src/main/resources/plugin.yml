@@ -1,5 +1,5 @@
 name: cItems
-version: 1.7
+version: 1.8
 author: CyberCraft Studio
 authors: [Mr_maderator_YT, Sarah_Fox, ssokeer]
 main: com.ccs.citems.Main
@@ -27,7 +27,7 @@ commands:
 #1.4.5 - fixed bugs with location of item
 #1.4.6 - fixed massages in console and add title of gui
 #1.4.7 - fixed bugs with gui title
-#1.4.8 - fixed bug with massage in chat
+#1.4.8 - fixed bug with message in chat
 #1.5 - add new item - pickaxe of doubling
 #1.5.1 - fixed bugs with pickaxe of doubling
 #1.5.2 - fixed bugs with explosion
@@ -39,3 +39,6 @@ commands:
 #1.6 - add new item - helmet of power
 #1.6.1 - fixed error with registering element
 #1.7 - adding permission for items, optimisation added, fixed drops for pickaxe of doubling
+#1.8 - fixed bugs from helmet, witch didn`t gave effects and added new item - hoe
+#1.9 - added hoe witch can remove chunks
+#1.9.1 - remove hoe into boots witch can fly

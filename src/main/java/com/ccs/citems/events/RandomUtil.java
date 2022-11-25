@@ -1,3 +1,4 @@
+//class for spawn random amount of lapis
 package com.ccs.citems.events;
 
 import java.util.Random;

@@ -1,3 +1,4 @@
+//class witch shows gui
 package com.ccs.citems.gui;
 
 import com.ccs.citems.items.manager;
@@ -40,9 +41,9 @@ public class gui implements Listener {
             player.openInventory(gui);
 
 
-            ItemStack itemfour = new ItemStack(Material.RED_STAINED_GLASS_PANE, 1);
+            ItemStack itemfour = new ItemStack(Material.GOLDEN_BOOTS, 1);
             ItemMeta metafour = item.getItemMeta();
-            metafour.setDisplayName("§4§l§nComming soon");
+            metafour.setDisplayName("§bBoots of flying");
             itemfour.setItemMeta(metafour);
             gui.setItem(3, itemfour);
             player.openInventory(gui);
@@ -59,7 +60,6 @@ public class gui implements Listener {
         @EventHandler
     public void guiClickEvent(InventoryClickEvent event){
             InventoryView view = event.getView();
-
             if (!event.getInventory().equals(gui)||view.getTitle().equals("§apanel of items")){
                 return;
             }
@@ -70,15 +70,23 @@ public class gui implements Listener {
                     Player player = (Player) event.getWhoClicked();
                     player.closeInventory();
                     player.getInventory().addItem(manager.wand);
+                    break;
                 case 1:
                     Player player1 = (Player) event.getWhoClicked();
                     player1.closeInventory();
                     player1.getInventory().addItem(manager.pickAxe);
+                    break;
                 case 2:
                     Player player2 = (Player) event.getWhoClicked();
                     player2.closeInventory();
                     player2.getInventory().addItem(manager.helmet);
                     break;
+                case 3:
+                    Player player3 = (Player) event.getWhoClicked();
+                    player3.closeInventory();
+                    player3.getInventory().addItem(manager.boots);
+
+
 
                 }
             }
@@ -86,6 +94,7 @@ public class gui implements Listener {
         @EventHandler
     public void openGuiEvent(guiEvents event){
             openGui(event.getPlayer());
+
         }
 
 }

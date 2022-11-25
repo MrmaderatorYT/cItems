@@ -1,3 +1,4 @@
+// class witch get to player items
 package com.ccs.citems.items;
 
 import org.bukkit.Material;
@@ -13,12 +14,14 @@ public class manager {
     public static ItemStack wand;
     public static ItemStack pickAxe;
     public static ItemStack helmet;
+    public static ItemStack boots;
 
 
     public static void init() {
         createWand();
         createPickAxe();
         createHelmet();
+        createBoots();
 
 
     }
@@ -51,7 +54,7 @@ public class manager {
     private static void createHelmet() {
         ItemStack item = new ItemStack(Material.LEATHER_HELMET, 1);
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName("§fHelmet of power");
+        meta.setDisplayName("Helmet of power");
         List<String> lore = new ArrayList<>();
         lore.add("§7This can help you in pvp");
         meta.setLore(lore);
@@ -59,5 +62,17 @@ public class manager {
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         item.setItemMeta(meta);
         helmet = item;
+    }
+    private static void createBoots() {
+        ItemStack item = new ItemStack(Material.GOLDEN_BOOTS, 1);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName("Boots of flying");
+        List<String> lore = new ArrayList<>();
+        lore.add("§7Let`s fly into the sky");
+        meta.setLore(lore);
+        meta.addEnchant(Enchantment.SILK_TOUCH, 3, false);
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        item.setItemMeta(meta);
+        boots = item;
     }
 }
